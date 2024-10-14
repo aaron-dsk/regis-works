@@ -1,9 +1,9 @@
-import { Offerings } from "@/components/offerings";
+import { ModernResourceBrowser } from "@/components/modern-resource-browser";
 
 export default function Home() {
   return (
     <main>
-      <Offerings />
+      <ModernResourceBrowser />
     </main>
   );
 }
