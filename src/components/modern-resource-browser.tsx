@@ -210,8 +210,8 @@ export function ModernResourceBrowser() {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">All Degrees</SelectItem>
-              <SelectItem value="Bachelor's">Bachelor's</SelectItem>
-              <SelectItem value="Master's">Master's</SelectItem>
+              <SelectItem value="Bachelors">Bachelors</SelectItem>
+              <SelectItem value="Masters">Masters</SelectItem>
               <SelectItem value="PhD">PhD</SelectItem>
             </SelectContent>
           </Select>
