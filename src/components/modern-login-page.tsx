@@ -37,7 +37,7 @@ export function ModernLoginPageComponent() {
     <div className="min-h-screen flex items-center justify-center bg-gray-900 bg-opacity-50 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMDAwMDAwIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiMyMjIiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=')]">
       <div className="w-full max-w-md p-8 space-y-8 bg-gray-800 bg-opacity-50 backdrop-blur-lg rounded-2xl shadow-2xl">
         <div className="text-center">
-          <h2 className="mt-6 text-3xl font-bold text-white">Welcome to FractionsX</h2>
+          <h2 className="mt-6 text-3xl font-bold text-white">Welcome to Regis Works</h2>
           <p className="mt-2 text-sm text-gray-400">Log In</p>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
