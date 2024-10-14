@@ -28,7 +28,7 @@ export function NavMenu() {
   return (
     <nav className="w-64 flex-shrink-0 bg-[#0a2540] text-white p-4 h-screen overflow-y-auto">
       <div className="flex items-center mb-8">
-        <h1 className="text-2xl font-bold text-white">FractionsX</h1>
+        <h1 className="text-2xl font-bold text-white">Regis Works</h1>
       </div>
       <ul className="space-y-4">
         {menuItems.map((item) => (

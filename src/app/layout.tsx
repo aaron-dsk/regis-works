@@ -15,8 +15,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "FractionsX",
-  description: "FractionsX application",
+  title: "Regis Works",
+  description: "Regis Works Dashboard",
 };
 
 export default function RootLayout({
