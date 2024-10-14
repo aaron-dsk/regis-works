@@ -3,7 +3,6 @@
 import { useState, useMemo } from "react"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -26,7 +25,7 @@ const profiles: Profile[] = [
     tools: ["Tableau", "EasyEDA", "YellowFinbi"],
     skills: ["Machine Learning", "Data Analysis"],
     fieldOfStudy: "Computer Science",
-    degreeLevel: "Master's",
+    degreeLevel: "Masters",
     workExperience: 3,
   },
   {
@@ -35,7 +34,7 @@ const profiles: Profile[] = [
     tools: ["Zoho", "Kicad", "Altium"],
     skills: ["Web Development", "UI/UX Design"],
     fieldOfStudy: "Information Technology",
-    degreeLevel: "Bachelor's",
+    degreeLevel: "Bachelors",
     workExperience: 5,
   },
   {
@@ -53,7 +52,7 @@ const profiles: Profile[] = [
     tools: ["Kicad", "Altium", "SolidWorks"],
     skills: ["Signal Processing", "Control Systems"],
     fieldOfStudy: "Electrical Engineering",
-    degreeLevel: "Master's",
+    degreeLevel: "Masters",
     workExperience: 4,
   },
   {
@@ -62,7 +61,7 @@ const profiles: Profile[] = [
     tools: ["Tableau", "Zoho", "EasyEDA"],
     skills: ["3D Modeling", "Game Design"],
     fieldOfStudy: "Computer Graphics",
-    degreeLevel: "Bachelor's",
+    degreeLevel: "Bachelors",
     workExperience: 2,
   },
   {
@@ -71,7 +70,7 @@ const profiles: Profile[] = [
     tools: ["Tableau", "SolidWorks", "Zoho"],
     skills: ["Data Visualization", "3D Modeling"],
     fieldOfStudy: "Mechanical Engineering",
-    degreeLevel: "Master's",
+    degreeLevel: "Masters",
     workExperience: 6,
   },
   {
@@ -80,7 +79,7 @@ const profiles: Profile[] = [
     tools: ["EasyEDA", "Kicad", "Altium"],
     skills: ["Circuit Design", "Embedded Systems"],
     fieldOfStudy: "Electrical Engineering",
-    degreeLevel: "Bachelor's",
+    degreeLevel: "Bachelors",
     workExperience: 3,
   },
   {
@@ -98,7 +97,7 @@ const profiles: Profile[] = [
     tools: ["Kicad", "EasyEDA", "Altium"],
     skills: ["PCB Design", "Prototyping"],
     fieldOfStudy: "Electronics Engineering",
-    degreeLevel: "Bachelor's",
+    degreeLevel: "Bachelors",
     workExperience: 4,
   },
   {
@@ -107,7 +106,7 @@ const profiles: Profile[] = [
     tools: ["Tableau", "SolidWorks", "Zoho"],
     skills: ["Data Science", "Machine Learning"],
     fieldOfStudy: "Computer Science",
-    degreeLevel: "Master's",
+    degreeLevel: "Masters",
     workExperience: 5,
   },
   {
