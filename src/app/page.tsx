@@ -5,7 +5,7 @@ export default function Home() {
   const isLoggedIn = typeof window !== 'undefined' && localStorage.getItem('isLoggedIn') === 'true'
 
   if (isLoggedIn) {
-    redirect('/(auth)/offerings')
+    redirect('/(auth)/recommended-jobs')
   } else {
     redirect('/login')
   }

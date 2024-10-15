@@ -1,51 +1,63 @@
 'use client'
 
-import Link from 'next/link'
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
+import { ChevronRight, Search, Briefcase, BookmarkIcon, BarChart2, Eye, MessageCircle, Settings, CreditCard, FileText, HelpCircle, Mail, Info } from "lucide-react"
+import Link from "next/link"
 import { usePathname } from 'next/navigation'
-import { Wallet, LayoutGrid, Home, CreditCard, Bell, FileText, ShoppingCart, HeadphonesIcon, Settings } from 'lucide-react'
 
-export function NavMenu() {
+export function SideBarNav() {
   const pathname = usePathname()
-  const defaultPath = '/offerings'
 
   const menuItems = [
-    { name: 'OFFERINGS', icon: Home, path: '/offerings' },
-    { name: 'WALLET MANAGEMENT', icon: Wallet, path: '/wallet-management' },
-    { name: 'MY PORTFOLIO', icon: LayoutGrid, path: '/portfolio' },
-    { name: 'MY TRANSACTIONS', icon: CreditCard, path: '/transactions' },
-    { name: 'MARKETPLACE', icon: ShoppingCart, path: '/marketplace' },
-    { name: 'NEWS / UPDATES', icon: Bell, path: '/news' },
-    { name: 'CONTRACTS', icon: FileText, path: '/contracts' },
-    { name: 'SUPPORT', icon: HeadphonesIcon, path: '/support' },
-    { name: 'SETTINGS', icon: Settings, path: '/settings' },
+    { name: 'Search jobs', icon: Search, path: '/search-jobs' },
+    { name: 'Recommended jobs', icon: Briefcase, path: '/recommended-jobs' },
+    { name: 'Saved jobs', icon: BookmarkIcon, path: '/saved-jobs' },
+    { name: 'Profile performance', icon: BarChart2, path: '/profile-performance' },
+    { name: 'Display preferences', icon: Eye, path: '/display-preferences' },
+    { name: 'Chat for help', icon: MessageCircle, path: '/chat' },
+    { name: 'Settings', icon: Settings, path: '/settings' },
+    { name: 'Jobseeker services', icon: CreditCard, path: '/jobseeker-services' },
+    { name: 'JobNest blog', icon: FileText, path: '/blog' },
+    { name: 'How JobNest works', icon: HelpCircle, path: '/how-it-works' },
+    { name: 'Write to us', icon: Mail, path: '/contact' },
+    { name: 'About us', icon: Info, path: '/about' },
   ]
 
-  const isActive = (path: string) => {
-    if (pathname === '/' && path === defaultPath) return true
-    return pathname === path
-  }
+  const isActive = (path: string) => pathname === path
 
   return (
-    <nav className="w-64 flex-shrink-0 bg-[#0a2540] text-white p-4 h-screen overflow-y-auto">
-      <div className="flex items-center mb-8">
-        <h1 className="text-2xl font-bold text-white">Regis Works</h1>
+    <div className="flex flex-col h-screen w-72 bg-gray-900 text-gray-100">
+      <div className="p-4 border-b border-gray-800">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-3">
+            <Avatar className="w-10 h-10 border-2 border-green-500">
+              <AvatarImage src="/placeholder.svg?height=40&width=40" alt="Furkan Sarkar" />
+              <AvatarFallback>FS</AvatarFallback>
+            </Avatar>
+            <div>
+              <h2 className="text-sm font-semibold">Furkan Sarkar</h2>
+              <Link className="text-xs text-blue-400" href="#">
+                Update profile
+              </Link>
+            </div>
+          </div>
+          <ChevronRight className="w-5 h-5 text-gray-600" />
+        </div>
       </div>
-      <ul className="space-y-4">
-        {menuItems.map((item) => (
-          <li key={item.name}>
-            <Link href={item.path}>
-              <button
-                className={`flex items-center w-full py-3 px-2 rounded-md transition-colors ${
-                  isActive(item.path) ? 'bg-white text-[#0a2540]' : 'hover:bg-white/10'
-                }`}
-              >
-                <item.icon className="w-5 h-5 mr-3" />
-                <span className="text-sm">{item.name}</span>
-              </button>
+      <nav className="flex-1 overflow-y-auto">
+        <div className="px-4 py-2 space-y-1">
+          {menuItems.map((item) => (
+            <Link key={item.name} href={item.path}>
+              <Button variant="ghost" className={`w-full justify-start ${isActive(item.path) ? 'bg-gray-800' : ''}`}>
+                <item.icon className="mr-2 h-4 w-4" />
+                {item.name}
+              </Button>
             </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+          ))}
+        </div>
+      </nav>
+      <div className="p-4 text-xs text-gray-500">Version 20.78</div>
+    </div>
   )
 }
