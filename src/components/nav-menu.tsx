@@ -19,7 +19,7 @@ export function SideBarNav() {
     { name: 'Settings', icon: Settings, path: '/settings' },
     { name: 'Jobseeker services', icon: CreditCard, path: '/jobseeker-services' },
     { name: 'JobNest blog', icon: FileText, path: '/blog' },
-    { name: 'How JobNest works', icon: HelpCircle, path: '/how-it-works' },
+    { name: 'Help Center', icon: HelpCircle, path: '/help-center' },
     { name: 'Write to us', icon: Mail, path: '/contact' },
     { name: 'About us', icon: Info, path: '/about' },
   ]
