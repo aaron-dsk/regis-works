@@ -14,14 +14,10 @@ export function SideBarNav() {
     { name: 'Recommended jobs', icon: Briefcase, path: '/recommended-jobs' },
     { name: 'Saved jobs', icon: BookmarkIcon, path: '/saved-jobs' },
     { name: 'Profile performance', icon: BarChart2, path: '/profile-performance' },
-    { name: 'Display preferences', icon: Eye, path: '/display-preferences' },
-    { name: 'Chat for help', icon: MessageCircle, path: '/chat' },
+    { name: 'Communications', icon: Mail, path: '/communications' },
     { name: 'Settings', icon: Settings, path: '/settings' },
-    { name: 'Jobseeker services', icon: CreditCard, path: '/jobseeker-services' },
-    { name: 'JobNest blog', icon: FileText, path: '/blog' },
+    { name: 'Regis Works blog', icon: FileText, path: '/blog' },
     { name: 'Help Center', icon: HelpCircle, path: '/help-center' },
-    { name: 'Write to us', icon: Mail, path: '/contact' },
-    { name: 'About us', icon: Info, path: '/about' },
   ]
 
   const isActive = (path: string) => pathname === path
