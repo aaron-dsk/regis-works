@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ChevronRight, MapPin, Star } from "lucide-react"
+import { ChevronRight, MapPin, Star, Building2 } from "lucide-react"
 
 interface Job {
   title: string
@@ -24,11 +24,7 @@ function JobCard({ job }: { job: Job }) {
     <Card className="bg-white text-black border border-gray-300">
       <CardContent className="p-4">
         <div className="mb-2">
-          <img 
-            src={job.logo || "/placeholder.svg?height=32&width=32"} 
-            alt={`${job.company} logo`} 
-            className="w-8 h-8"
-          />
+          <Building2 className="w-8 h-8 text-gray-400" />
         </div>
         <h3 className="font-semibold">{job.title}</h3>
         <p className="text-sm text-gray-600">{job.company}</p>
