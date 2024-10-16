@@ -21,24 +21,24 @@ interface JobSectionProps {
 
 function JobCard({ job }: { job: Job }) {
   return (
-    <Card className="bg-white text-black border border-gray-300">
+    <Card className="bg-card text-card-foreground border border-border">
       <CardContent className="p-4">
         <div className="mb-2">
-          <Building2 className="w-8 h-8 text-gray-400" />
+          <Building2 className="w-8 h-8 text-muted-foreground" />
         </div>
         <h3 className="font-semibold">{job.title}</h3>
-        <p className="text-sm text-gray-600">{job.company}</p>
+        <p className="text-sm text-muted-foreground">{job.company}</p>
         {job.rating && (
           <div className="flex items-center mt-1">
             <Star className="w-4 h-4 text-yellow-400 mr-1" />
             <span className="text-sm">{job.rating}</span>
           </div>
         )}
-        <div className="flex items-center mt-1 text-sm text-gray-600">
+        <div className="flex items-center mt-1 text-sm text-muted-foreground">
           <MapPin className="w-4 h-4 mr-1" />
           <span>{job.location}</span>
         </div>
-        <p className="text-xs text-gray-500 mt-2">{job.postedAgo}</p>
+        <p className="text-xs text-muted-foreground mt-2">{job.postedAgo}</p>
       </CardContent>
     </Card>
   )
@@ -48,10 +48,10 @@ function JobSection({ title, jobs, totalJobs }: JobSectionProps) {
   return (
     <div className="mb-8">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-semibold text-black">
-          {title} <span className="text-gray-600">({totalJobs})</span>
+        <h2 className="text-xl font-semibold text-foreground">
+          {title} <span className="text-muted-foreground">({totalJobs})</span>
         </h2>
-        <Button variant="link" className="text-blue-600 hover:text-blue-500">
+        <Button variant="link" className="text-primary hover:text-primary/80">
           View all
         </Button>
       </div>
@@ -60,9 +60,9 @@ function JobSection({ title, jobs, totalJobs }: JobSectionProps) {
           <JobCard key={index} job={job} />
         ))}
         {jobs.length < totalJobs && (
-          <Card className="bg-white text-black border border-gray-300 flex items-center justify-center">
+          <Card className="bg-card text-card-foreground border border-border flex items-center justify-center">
             <CardContent>
-              <Button variant="ghost" className="text-blue-600 hover:text-blue-500">
+              <Button variant="ghost" className="text-primary hover:text-primary/80">
                 View all {totalJobs} jobs <ChevronRight className="ml-2 w-4 h-4" />
               </Button>
             </CardContent>
@@ -150,7 +150,7 @@ export function JobListings() {
   ]
 
   return (
-    <div className="min-h-screen bg-white text-black p-8 w-full max-w-10xl mx-auto">
+    <div className="min-h-screen bg-background text-foreground p-8 w-full max-w-10xl mx-auto">
       <JobSection title="Jobs based on your preferences" jobs={jobsBasedOnPreferences} totalJobs={10} />
       <JobSection title="Recommended jobs" jobs={recommendedJobs} totalJobs={10} />
       <JobSection title="You might like" jobs={youMightLike} totalJobs={2} />

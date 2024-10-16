@@ -26,8 +26,8 @@ function SettingItem({ icon, title, description }: SettingItemProps) {
 
 export function Settings() {
   return (
-    <div className="min-h-screen bg-white text-gray-900 max-w-full overflow-x-hidden">
-      <header className="p-4 border-b">
+    <div className="min-h-screen bg-background text-foreground max-w-full overflow-x-hidden">
+      <header className="p-4 border-b border-border">
         <h1 className="text-xl font-semibold">Settings</h1>
       </header>
       <main className="p-4 space-y-4">
