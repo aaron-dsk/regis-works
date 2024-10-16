@@ -97,7 +97,7 @@ export function ProfilePerformance() {
                 <Button variant="outline" className="text-blue-600 border-blue-600">Share interest</Button>
               </div>
             </div>
-            <p className="text-sm text-gray-600 mb-2">Searched "{['Fullstack Developer', 'Fullstack python Developer', 'Python Software Developer'][index]}"</p>
+            <p className="text-sm text-gray-600 mb-2">{`Searched "${['Fullstack Developer', 'Fullstack python Developer', 'Python Software Developer'][index]}"`}</p>
           </CardContent>
         </Card>
       ))}

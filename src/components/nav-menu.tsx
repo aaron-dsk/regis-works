@@ -2,7 +2,7 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import { ChevronRight, Search, Briefcase, BookmarkIcon, BarChart2, Eye, MessageCircle, Settings, CreditCard, FileText, HelpCircle, Mail, Info } from "lucide-react"
+import { Search, Briefcase, BookmarkIcon, BarChart2, Settings, FileText, HelpCircle, Mail } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
 
@@ -28,17 +28,16 @@ export function SideBarNav() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <Avatar className="w-10 h-10 border-2 border-green-500">
-              <AvatarImage src="/placeholder.svg?height=40&width=40" alt="Furkan Sarkar" />
+              <AvatarImage src="/images/profile-pic.png" alt="John Doe" />
               <AvatarFallback>FS</AvatarFallback>
             </Avatar>
             <div>
-              <h2 className="text-sm font-semibold">Furkan Sarkar</h2>
+              <h2 className="text-sm font-semibold">John Doe</h2>
               <Link className="text-xs text-blue-400" href="#">
                 Update profile
               </Link>
             </div>
           </div>
-          <ChevronRight className="w-5 h-5 text-gray-600" />
         </div>
       </div>
       <nav className="flex-1 overflow-y-auto">
