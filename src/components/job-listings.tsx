@@ -21,7 +21,7 @@ interface JobSectionProps {
 
 function JobCard({ job }: { job: Job }) {
   return (
-    <Card className="bg-card text-card-foreground border border-border">
+    <Card className="dark:bg-gray-800 text-card-foreground border border-border">
       <CardContent className="p-4">
         <div className="mb-2">
           <Building2 className="w-8 h-8 text-muted-foreground" />
