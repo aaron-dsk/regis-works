@@ -46,7 +46,7 @@ const contentMap: { [key: string]: string } = {
     your annual income level and net worth. As a non-accredited investor, you can
     invest the greater of
 
-    • $2,500; or
+    ��� $2,500; or
     • If your annual income or net worth is less than $124,000, you can invest 5% of
       the greater of your annual income or net worth; or
     • If both your income and net worth are equal to or more than $124,000, you
@@ -64,8 +64,8 @@ export default function HelpCenter() {
   const [selectedTopic, setSelectedTopic] = useState('how-much-invest')
 
   return (
-    <div className="flex min-h-screen bg-gray-100">
-      <aside className="w-1/4 bg-white p-6 overflow-y-auto">
+    <div className="flex min-h-screen bg-background text-foreground">
+      <aside className="w-1/4 bg-card p-6 overflow-y-auto">
         <h2 className="text-2xl font-bold mb-4">Getting started</h2>
         <nav>
           <ul className="space-y-2">
@@ -74,7 +74,9 @@ export default function HelpCenter() {
                 <button
                   onClick={() => setSelectedTopic(topic.id)}
                   className={`text-left w-full p-2 rounded ${
-                    selectedTopic === topic.id ? 'bg-blue-100 text-blue-600' : 'hover:bg-gray-100'
+                    selectedTopic === topic.id 
+                      ? 'bg-blue-100 text-blue-600' 
+                      : 'hover:bg-muted'
                   }`}
                 >
                   {topic.title}
