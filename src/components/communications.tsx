@@ -62,7 +62,7 @@ export function ChatInterface() {
         <div className="flex-1 overflow-y-auto p-4 bg-gray-50">
           <div className="bg-white rounded-lg p-4 shadow mb-4">
             <p className="text-sm">
-              Hello! I'm here your concierge, here to assist you with understanding and navigating the
+              Hello! I am here your concierge, here to assist you with understanding and navigating the
               Regis Works platform. If you have any questions or need clarification on anything, I am be happy to help. 
               How can I assist you today?
             </p>
