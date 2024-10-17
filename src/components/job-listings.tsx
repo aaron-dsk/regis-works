@@ -2,8 +2,8 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ChevronRight, MapPin, Star, Building2 } from "lucide-react"
-
+import { ChevronRight, MapPin, Star } from "lucide-react"
+import Image from "next/image"
 interface Job {
   title: string
   company: string
@@ -24,7 +24,13 @@ function JobCard({ job }: { job: Job }) {
     <Card className="dark:bg-gray-800 text-card-foreground border border-border">
       <CardContent className="p-4">
         <div className="mb-2">
-          <Building2 className="w-8 h-8 text-muted-foreground" />
+          <Image
+              src={job.logo}
+              alt={`${job.company} logo`}
+              width={32}
+              height={32}
+              className="w-8 h-8"
+          />
         </div>
         <h3 className="font-semibold">{job.title}</h3>
         <p className="text-sm text-muted-foreground">{job.company}</p>
@@ -59,15 +65,6 @@ function JobSection({ title, jobs, totalJobs }: JobSectionProps) {
         {jobs.map((job, index) => (
           <JobCard key={index} job={job} />
         ))}
-        {jobs.length < totalJobs && (
-          <Card className="bg-card text-card-foreground border border-border flex items-center justify-center">
-            <CardContent>
-              <Button variant="ghost" className="text-primary hover:text-primary/80">
-                View all {totalJobs} jobs <ChevronRight className="ml-2 w-4 h-4" />
-              </Button>
-            </CardContent>
-          </Card>
-        )}
       </div>
     </div>
   )
@@ -76,58 +73,63 @@ function JobSection({ title, jobs, totalJobs }: JobSectionProps) {
 export function JobListings() {
   const jobsBasedOnPreferences: Job[] = [
     {
-      title: "Staff Software Engineer",
-      company: "Visa",
-      location: "Bengaluru",
-      logo: "/placeholder.svg?height=32&width=32",
-      rating: 4.1,
+      title: "Data Scientist (Genomics)",
+      company: "Harvard Medical School",
+      location: "Cambridge, MA",
+      logo: "/images/job-listings/harvard.jpg",
       postedAgo: "1d ago",
     },
     {
-      title: "Software Engineer",
-      company: "Global Software Development Co.",
-      location: "Hybrid - Bengaluru",
-      logo: "/placeholder.svg?height=32&width=32",
+      title: "Full Stack Developer",
+      company: "University of Michigan",
+      location: "Ann Arbor, MI",
+      logo: "/images/job-listings/michigan.jpg",
       postedAgo: "3d ago",
     },
     {
-      title: "Software Engineer",
-      company: "Wilatons",
-      location: "Pune, Chennai, Bengaluru",
-      logo: "/placeholder.svg?height=32&width=32",
-      postedAgo: "3d ago",
+      title: "SAI Research Engineer",
+      company: "Georgia Institute of Technology",
+      location: "Atlanta, GA",
+      logo: "/images/job-listings/gt.png",
+      postedAgo: "4d ago",
     },
+    {
+      title: "Blockchain Developer",
+      company: "MIT",
+      location: "Cambridge, MA",
+      logo: "/images/job-listings/mit.png",
+      postedAgo: "6d ago",
+    },
+    
   ]
 
   const recommendedJobs: Job[] = [
     {
-      title: "Web Developer",
-      company: "Wikiprospects",
-      location: "Bengaluru, Indiranagar",
-      logo: "/placeholder.svg?height=32&width=32",
-      rating: 4.7,
+      title: "Cloud Infrastructure Engineer",
+      company: "University of Texas, Austin",
+      location: "Austin, TX",
+      logo: "/images/job-listings/austin.jpg",
       postedAgo: "1d ago",
     },
     {
-      title: "Software Engineer",
-      company: "AskmeOffers.com unit of Iussac L.",
-      location: "Remote",
-      logo: "/placeholder.svg?height=32&width=32",
-      rating: 5.0,
+      title: "AI/ML for Medical Diagnostics",
+      company: "University of California, Berkeley",
+      location: "Berkeley, CA",
+      logo: "/images/job-listings/berkley.png",
       postedAgo: "2d ago",
     },
     {
-      title: "Software Engineer",
-      company: "Global Software Development Co.",
-      location: "Hybrid - Bengaluru",
-      logo: "/placeholder.svg?height=32&width=32",
+      title: "Renewable Energy Solutions",
+      company: "Stanford University",
+      location: "Stanford, CA",
+      logo: "/images/job-listings/stanford.png",
       postedAgo: "3d ago",
     },
     {
-      title: "Software Engineer",
-      company: "Wilatons",
-      location: "Pune, Chennai, Bengaluru",
-      logo: "/placeholder.svg?height=32&width=32",
+      title: "Cancer Immunotherapy Research",
+      company: "Johns Hopkins University",
+      location: "Baltimore, MD",
+      logo: "/images/job-listings/hopkins.jpg",
       postedAgo: "3d ago",
     },
   ]
