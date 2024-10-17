@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { MapPin, Star } from "lucide-react"
 import Image from "next/image"
+
 interface Job {
   title: string
   company: string
@@ -136,17 +137,17 @@ export function JobListings() {
 
   const youMightLike: Job[] = [
     {
-      title: "Full Stack Developer ( Fresher )",
-      company: "SprintPro Software Solutions Pvt.",
-      location: "Durgapur",
-      logo: "/placeholder.svg?height=32&width=32",
+      title: "3D Printing for Biomedical Devices",
+      company: "University of Pennsylvania",
+      location: "Philadelphia, PA",
+      logo: "/images/job-listings/upenn.png",
       postedAgo: "3d ago",
     },
     {
-      title: "Software Engineer",
-      company: "Global Software Development Co.",
-      location: "Hybrid - Bengaluru",
-      logo: "/placeholder.svg?height=32&width=32",
+      title: "Autonomous Vehicle Systems Development",
+      company: "Carnegie Mellon University",
+      location: "Pittsburgh, PA",
+      logo: "/images/job-listings/carnegie.png",
       postedAgo: "3d ago",
     },
   ]
