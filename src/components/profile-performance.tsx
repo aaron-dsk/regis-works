@@ -50,17 +50,11 @@ export function ProfilePerformance() {
         </CardContent>
       </Card>
 
-      <div className="flex items-center justify-between mb-4">
-        <p className="text-sm">3X more chances of Callback. <Button variant="link" className="text-primary hover:text-primary/80 p-0 h-auto text-xs">Click Here <ExternalLink className="ml-1 h-3 w-3" /></Button></p>
-        <p className="text-xs text-muted-foreground">Paid Services</p>
-      </div>
-
       <h2 className="text-xl font-semibold mb-4">You appeared in recruiter searches</h2>
 
       <Card className="mb-6 bg-card text-card-foreground">
         <CardHeader className="flex flex-row items-center justify-between">
           <CardTitle className="text-base font-semibold">31 Search appearances in 90 days</CardTitle>
-          <ChevronDown className="h-4 w-4" />
         </CardHeader>
         <CardContent>
           <p className="text-sm text-green-600">3% more actions since last week</p>
@@ -79,7 +73,7 @@ export function ProfilePerformance() {
         </CardContent>
       </Card>
 
-      {['Msci', 'Test Yantra', 'Numeric tecnologies India'].map((company, index) => (
+      {['Stanford Researcher', 'NeuralTech Solutions', 'BioMed Innovations'].map((company, index) => (
         <Card key={index} className="mb-4 bg-card text-card-foreground">
           <CardContent className="p-4">
             <div className="flex items-center justify-between mb-2">
@@ -89,15 +83,15 @@ export function ProfilePerformance() {
                 </div>
                 <div>
                   <h4 className="font-semibold">{company}</h4>
-                  <p className="text-sm text-muted-foreground">Pune, Bangalore/Bengaluru</p>
+                  <p className="text-sm text-muted-foreground">Palo Alto, CA</p>
                 </div>
               </div>
               <p className="text-xs text-muted-foreground">{index + 1}d ago</p>
             </div>
             <div className="flex justify-between items-end mt-2">
-              <p className="text-sm text-muted-foreground">{`Searched "${['Fullstack Developer', 'Fullstack python Developer', 'Python Software Developer'][index]}"`}</p>
+              <p className="text-sm text-muted-foreground">{`Searched "${['Fullstack Developer', 'Python Developer', 'AI/ML Engineer'][index]}"`}</p>
               <Button variant="outline" className="bg-blue-500 hover:bg-blue-600 text-white border-blue-500 hover:border-blue-600">
-                Share interest
+                View Profile
               </Button>
             </div>
           </CardContent>
